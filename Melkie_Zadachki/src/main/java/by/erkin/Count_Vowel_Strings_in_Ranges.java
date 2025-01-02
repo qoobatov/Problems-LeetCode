@@ -10,7 +10,6 @@ public class Count_Vowel_Strings_in_Ranges {
         String[] words = {"aba", "bcb", "ece", "aa", "e"};
         int[][] ranges = {{0, 2}, {1, 4}, {1, 1}};
 
-
         for (int i = 0; i < ranges.length; i++) {
             int start = ranges[i][0];
             int end = ranges[i][1];
