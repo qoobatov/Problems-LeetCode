@@ -23,8 +23,6 @@ public class Count_Vowel_Strings_in_Ranges {
             }
             prefixSum[i] = sum;
         }
-
-
         for (int i = 0; i < queries.length; i++) {
             int[] currentQuery = queries[i];
             ans[i] = prefixSum[currentQuery[1]] - (currentQuery[0] == 0 ? 0 : prefixSum[currentQuery[0] - 1]);
