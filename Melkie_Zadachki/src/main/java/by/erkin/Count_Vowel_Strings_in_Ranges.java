@@ -27,7 +27,6 @@ public class Count_Vowel_Strings_in_Ranges {
             int[] currentQuery = queries[i];
             ans[i] = prefixSum[currentQuery[1]] - (currentQuery[0] == 0 ? 0 : prefixSum[currentQuery[0] - 1]);
         }
-
         return ans;
     }
 
