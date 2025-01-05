@@ -1,23 +1,18 @@
 package by.erkin;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
 public class Palindrome {
     public boolean isPalindrome(int x) {
-        if (x < 0) return false;
-        ArrayList<Integer> array = new ArrayList<Integer>();
-        do {
-            array.add(x % 10);
-            x /= 10;
-        } while (x > 0);
+        if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+        int reverse = 0;
+        int original = x;
 
-        for (int i = 0; i < array.size() / 2; i++) {
-            if (!Objects.equals(array.get(i), array.get(array.size() - 1 - i))) {
-                return false;
-            }
+        while (x > 0) {
+            int digit = x % 10;
+            reverse = reverse * 10 + digit;
+            x /= 10;
         }
-        return true;
+
+        return original == reverse;
     }
 
     public static void main(String[] args) {
