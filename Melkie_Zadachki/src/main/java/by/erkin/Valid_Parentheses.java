@@ -16,6 +16,7 @@ public class Valid_Parentheses {
                 }
             }
 
+
         }
         return stack.isEmpty();
     }
